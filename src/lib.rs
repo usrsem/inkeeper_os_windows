@@ -34,7 +34,7 @@ fn find_program_info(program_name: &str) -> Option<ProgramInfo> {
 }
 
 fn exec_tasklist() -> String {
-    let buf = Command::new("tasklist").arg("\\v").output().unwrap().stdout;
+    let buf = Command::new("tasklist").arg("/v").output().unwrap().stdout;
 
     match str::from_utf8(&buf) {
         Result::Ok(s) => String::from(s),
