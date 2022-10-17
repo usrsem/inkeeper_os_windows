@@ -1,0 +1,6 @@
+pub fn get_program_name_to_string_mapping() -> HashMap<ProgramName, &str> {
+    HashMap::from([
+        (ProgramName::Photoshop, "photoshop"),
+        (ProgramName::Sai, "sai"),
+    ])
+}
